@@ -1,0 +1,34 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+title:               Mayank Jain
+tagline:             Graduate Student at Binghamton University
+#description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:                 http://mayankj08.github.io
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              Mayank Jain
+  github:            mayankj08
+  email:             mjain8@binghamton.edu
+  linkedin:          mayankj08
+  url:               https://twitter.com/mdo
+  email:             mjain8@binghamton.edu
+  gravatar_md5:      
+
+# Custom vars
+version:             1.0.0
+
+#Gems
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "page:num"
+
+github:
+  repo: https://github.com/mayankj08/
