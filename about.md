@@ -13,7 +13,7 @@ You can contact me by sending an e-mail at myid at binghamton dot edu. myid is m
 
 Also, you can learn more about me on below platforms:
 
-* [Linkedin](www.linkedin.com/in/mayankj08)
+* [Linkedin](https://www.linkedin.com/in/mayankj08)
 * [Github](https://github.com/mayankj08)
 * [Facebook](https://www.facebook.com/mayankj08)
 
