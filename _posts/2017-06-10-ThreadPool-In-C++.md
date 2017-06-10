@@ -15,8 +15,8 @@ When ThreadPool class is initialized then few number of threads are created (we 
 
 Now when we want to a thread in out threadpool to run a new job we assign a new thread from threadpool following below steps:
 
-1. Check if there is any free thread in out thread pool. Free thread means thread which is waiting on condition variable.
-2. If there is atleast one free available then choose one free thread from pool and jump to step 5. Else continue
+1. Check if there is any free thread in our ThreadPool. Free thread means thread which is waiting on condition variable.
+2. If there is atleast one free available then choose one free thread from pool and jump to step 5. Else continue.
 3. Create few more threads like 5, 10 or so and make these new threads wait on condition variable too.
 4. Now select one free thread from newly created threadpool.
 5. Wake the selected thread by signalling on condition variable and give the workload to this selected thread.
@@ -38,3 +38,7 @@ Following methods are available in the API:
 **Implementation** 
 
 Can be found [here](https://github.com/mayankj08/APIs/tree/master/ThreadPool).
+
+Hope you found this post useful. Please comment in case of any query.
+
+Thanks
