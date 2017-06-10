@@ -7,13 +7,13 @@ comments : true
 
 **What is a ThreadPool**
 
-A thread pool is a pool of initialized threads which are ready to take workload. Thread pool is preferred over convetional thread system when we have large number of small task to be done.
+A thread pool is a pool of initialized threads which are ready to take workload. Thread pool is preferred over conventional thread system when we have large number of small task to be done.
 
 **Working**
 
 When ThreadPool class is initialized then few number of threads are created (we may even create zero threads initially, as done in my implementation) and these newly created threads are made to wait on [condition variable](https://en.wikipedia.org/wiki/Monitor_(synchronization)#Condition_variables_2).
 
-Now when we want to a thread in out threadpool to run a new job we assign a new thread from threadpool following below steps:
+Now when we want a thread from our threadpool to run a new job we follow below steps:
 
 1. Check if there is any free thread in our ThreadPool. Free thread means thread which is waiting on condition variable.
 2. If there is atleast one free available then choose one free thread from pool and jump to step 5. Else continue.
