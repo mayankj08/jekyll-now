@@ -5,8 +5,6 @@ title: About me!
 
 Thanks for visiting my webpage!. My name is Mayank Jain, and this is my blog about various technical topics.
 
-# Pesonal Information
-
 Currently I am completing my Master's at [Binghamton University](www.binghamton.edu) in Computer Science. I am passionate about programming and design.
 
 # Get In Touch
