@@ -5,7 +5,7 @@ tags: [ c++ ]
 comments : true
 ---
 
-## What is a functor ##
+## What is a functor? ##
 
 Functor or function object is a C++ class which defines the operator **( )**. Functor let's you create objects which "looks like" functions.
 
