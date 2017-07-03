@@ -9,6 +9,8 @@ comments : true
 
 Functor or function object is a C++ class which defines the operator **( )**. Functor let's you create objects which "looks like" functions.
 
+Consider below code to add two numbers:
+
 ```c
 #include<cassert>
 
