@@ -65,6 +65,8 @@ It's so easy and much more readble than doing same thing without using STL. Isn'
 
 But we do have one problem here if we use binary functor with std::transform instead of unary functor. Binary functor takes two input arguments while std::transform expects functor with just one argument. In this scenario `std::bind` can be useful.
 
+## Bind ##
+
 Let's take a example where we need to add 5 to each element of std::vector, vec1 and store the result in another vector named vec2. How can this be done using std::transform and std::plus?
 
 Here's the solution:
@@ -102,9 +104,8 @@ int main(){
 }
 ```
 
-Let's try to understand logic of above piece of code. `std::transform` as discussed previously run the functor (specified by last argument) for each element iterating from vec1.begin() to vec1.end(). Before moving forward let's first understand what `std::bind` does.
+Let's try to understand logic of above piece of code. `std::transform` as discussed previously invoke the functor (specified by last argument) for each element iterating from vec1.begin() to vec1.end(). Before moving forward let's first understand what `std::bind` does.
 
-## Bind ##
 
 `std::bind` is [partial function application](https://en.wikipedia.org/wiki/Partial_application). What this means is suppose you have a function `func1` which takes two args as `func1(arg1,arg2)`.
 
@@ -119,24 +120,24 @@ func2(arg1){
 
 `auto func2 = std::bind(func1,std::placeholders::_1,5)`
 
-What we are saying by above line is create `func2` by binding func1, first argument of func1 (specified as, std::placeholders::_1) and 5.^
+What we are saying by above line is: Create `func2` by binding func1, first argument of func1 (specified as, std::placeholders::_1) and 5.^
 
- ^`std::placeholders::_1` means first argument, `std::placeholders::_2` means second parameter and so on.`
+ ^`std::placeholders::_1` means first argument, `std::placeholders::_2` means second parameter and so on.
 
 You can do more crazy things with `std::bind` like changing order of arguments of a function.
 
 ## Back to example
 
-Let's move back to our example.  `std::bind(std::plus<int>(),std::placeholders::_1, ELEM_TO_ADD)` in out exmaple binds std::plus functor, first argument passed to bind (which in our case would be elements of vector, passed one by one) and constant ELEM\_TO\_ADD. In short this line transforms binary functor `std::plus` as unary functor. Another argument of functor is fixed value ELEM_TO_ADD.
+Let's move back to our example.  `std::bind(std::plus<int>(),std::placeholders::_1, ELEM_TO_ADD)` in our example binds std::plus functor, first argument passed to bind (which in our case would be elements of vector, passed one by one) and constant ELEM\_TO\_ADD. In short this line transforms binary functor `std::plus` into unary functor. Another argument of functor is fixed value ELEM_TO_ADD.
 
-Finally, we are storing the result of functor in vector, vec2, by using stl function [std::back_inserter](http://en.cppreference.com/w/cpp/iterator/back_inserter). This function just used push_back function of vector to insert result at back of specfied vector.
+Finally, we are storing the result of functor in vector, vec2, by using stl function [std::back_inserter](http://en.cppreference.com/w/cpp/iterator/back_inserter). This function just uses push_back function of vector to insert result at back of specfied vector.
 
 So, now you might be feeling that functors are indeed powerful. In next blog we will talk about lambdas, which are quite concise way of writing anonymous functions. 
 
 Till then [Sayonara](https://www.google.com/#q=sayonara).
 
 # Excericse 
-Can you think of solution to re-order arguments of a functions and create a new function? Basically we want to define func3 as 
+Can you think of solution to re-order arguments of a functions and create a new function? Basically, we want to define func3 as 
 
 ```
 func3(arg1,arg2,arg3){
