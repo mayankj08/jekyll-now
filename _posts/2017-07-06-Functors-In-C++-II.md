@@ -41,14 +41,16 @@ int main(){
         // Initializing vector with 1,2 and 3 as it's elements
         std::vector<int> vec = {1,2,3};
 
-        // Transforming each element of vector by multiplying it with -1.
-        // First argument to std::Transform is start iterator.        
-        // Second argument is end iterator
-        // Third argument says where we need to store the result.  
-        // Here we are storing result in vec itself.
-        // And the last argument says which functor do we need to call for 
-        // each element of vector from start iterator to end iterator
-        std::transform(vec.begin(),vec.end(),vec.begin(),std::negate<int>());
+        // Transforming each element of vector by multiplying 
+	// it with -1. First argument to std::Transform is 
+	// start iterator. Second argument is end iterator
+        // Third argument says where we need to store the 
+	// result. Here we are storing result in vec itself.
+        // And the last argument says which functor do we 
+	// need to call for each element of vector from 
+	// start iterator to end iterator
+        std::transform(vec.begin(),vec.end(),
+		vec.begin(),std::negate<int>());
 
         // print the transformed vector
         for(int i=0;i<vec.size();i++){
