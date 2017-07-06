@@ -27,7 +27,7 @@ Binary functors are functors those take two parameters while unary take only one
 
 Let's take a example here. Assume we need to multiply each element of vector by -1. This can be done very easily as:
 
-{% highlight c linenos %}
+```
 // Compile this code with -std=c++11 flag.
 // like: g++ -std=c++11 main.cpp
 
@@ -57,7 +57,7 @@ int main(){
         // output would be
         // -1 -2 -3
 }
-{% endhighlight %}
+```
 
 It's so easy and much more readble than doing same thing without using STL. Isn't it!?
 
@@ -67,7 +67,7 @@ Let's take a example where we need to add 5 to each element of std::vector, vec1
 
 Here's the solution:
 
-{% highlight c linenos %}
+```
 // Compile this code with -std=c++11.
 // g++ -std=c++11 main.cpp
 
@@ -95,7 +95,7 @@ int main(){
         // output would be
         // 6 7 8
 }
-{% endhighlight %}
+```
 
 Let's try to understand logic of above piece of code. `std::transform` as discussed previously run the functor (specified by last argument) for each element iterating from vec1.begin() to vec1.end(). Before moving forward let's first understand what `std::bind` does.
 
