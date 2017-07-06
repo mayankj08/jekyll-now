@@ -86,9 +86,12 @@ int main(){
         std::vector<int> vec1 = {1,2,3};
         std::vector<int> vec2;
 
-        std::transform(vec1.begin(),vec1.end(),std::back_inserter(vec2),
-                        std::bind(std::plus<int>(),std::placeholders::_1
-                        , ELEM_TO_ADD));
+        std::transform(vec1.begin(),vec1.end(),
+			std::back_inserter(vec2),
+                        std::bind(std::plus<int>(),
+				std::placeholders::_1,
+				ELEM_TO_ADD)
+		      );
 
         // print the transformed vector
         for(int i=0;i<vec2.size();i++){
