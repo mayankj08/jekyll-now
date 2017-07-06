@@ -27,7 +27,7 @@ Binary functors are functors those take two parameters while unary take only one
 
 Let's take a example here. Assume we need to multiply each element of vector by -1. This can be done very easily as:
 
-```
+```c
 // Compile this code with -std=c++11 flag.
 // like: g++ -std=c++11 main.cpp
 
@@ -67,7 +67,7 @@ Let's take a example where we need to add 5 to each element of std::vector, vec1
 
 Here's the solution:
 
-```
+```c
 // Compile this code with -std=c++11.
 // g++ -std=c++11 main.cpp
 
