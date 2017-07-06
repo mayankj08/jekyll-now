@@ -136,7 +136,7 @@ So, now you might be feeling that functors are indeed powerful. In next blog we 
 
 Till then [Sayonara](https://www.google.com/#q=sayonara).
 
-# Excericse 
+# Exercise 
 Can you think of solution to re-order arguments of a functions and create a new function? Basically, we want to define func3 as 
 
 ```
