@@ -121,7 +121,7 @@ Few points to remember :
 * `capture list` captures the value of variable when lambda was defined and not at time when lambda was called.
 ```c
 int a =10;
-auto myLambda = [a](){a = a+2;};
+auto myLambda = [a](){std:::cout << a;};
 a =14;
 myLambda(); // myLambda get value of a as 10 and not 14.
 ```
