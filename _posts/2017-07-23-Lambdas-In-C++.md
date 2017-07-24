@@ -68,7 +68,7 @@ In general, A lambda expression looks like:
 
 Now let's try to understand what each entity in above definition means.
 
-###[ capture list ] 
+### [ capture list ] 
 
 By default, variables of the enclosing scope cannot be accessed by a lambda. 
 
@@ -131,14 +131,16 @@ myLambda(); // myLambda get value of a as 14 and not 10.
 auto myLambda = [a](){a = a+2;} // Error: a is not defined.
 int a =10;
 myLambda(); 
-```###( Parameter list ) 
+```
+### ( Parameter list ) 
 
 This is the optional parameters list. We can omit parentheses when we don't need any argument to lambda (except in case when lambda is defined as mutable, we will see this later).
 
 > auto myLambda = [] { std::cout << " Hello world"; };  
 > // Valid. Notice we don't have () of parameter list between
 > capture list and function body.
-### return type
+
+### return type
 
 This is the return type of lambda. Most of the time, compilers can deduce the return type of the lambda expression when you have zero or one return statement, returning same type.  ```cauto myLambda = [](){std::cout << "hi";}; 
           // return type is deduced as void
