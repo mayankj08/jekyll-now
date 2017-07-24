@@ -118,12 +118,12 @@ Few points to remember :
 
 * Don't confuse `capture list` with arguments of conventional functions. Unlike function arguments, they do not have to be passed when calling the lambda.  
 
-* `capture list` captures the value of variable when lambda was called and not at time when lambda was defined.
+* `capture list` captures the value of variable when lambda was defined and not at time when lambda was called.
 ```c
 int a =10;
-auto myLambda = [a](){a = a+2;}
+auto myLambda = [a](){a = a+2;};
 a =14;
-myLambda(); // myLambda get value of a as 14 and not 10.
+myLambda(); // myLambda get value of a as 10 and not 14.
 ```
 
 * Variable should be defined in scope of lambda. 
