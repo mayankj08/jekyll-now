@@ -163,7 +163,7 @@ auto myLambda4 = []()-> double { if(a==2) return 2; else return 3.5;};
 		
 ```
 
-There are some differences among compilers regarding the automatic detection of return types when you have more than one return statement because the standard doesn't guarantee the automatic detection of return types.This post talks about syntax and some basic rules of lambdas. In next post we will talk about some more concepts in lambdas like mutable lambdas, recursive lambdas etc.
+This post talks about syntax and some basic rules of lambdas. In next post we will talk about some more concepts in lambdas like mutable lambdas, recursive lambdas etc.
 
 Till then, Sayonara. 
 
