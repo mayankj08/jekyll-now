@@ -46,7 +46,7 @@ Using `mutable` keyword allows us to mutate objects captured by value too.
 
 ```c
 int a=10;
-auto lam = [a]() mutable {a++;}; //Compilation error 
+auto lam = [a]() mutable {a++;};
 ```
 
 If we see the assembly code for same code the generated functor after adding mutable keyword looks like:
