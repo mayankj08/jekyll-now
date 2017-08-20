@@ -19,7 +19,7 @@ A `reference` defines an alternative name for an object. A reference type 'refer
 
 ```c
 int a = 10;
-int refA = &a;
+int &refA = a;
 ```
 In above snippet we bound a reference `refA` to integer variable `a`. In other words, `refA` is alias for `a`.
 
