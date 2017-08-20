@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Contents For References Series
-tags: [ c++ ]
-comments : true
+tags: [ info ]
+comments : false
 ---
 
 References Series:
