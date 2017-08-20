@@ -7,7 +7,7 @@ comments : true
 
 Starting from this post we will talk about lvalue references, pointers, rvalue references, move semantics etc.
 
-This is first post in this series. You will find all the post of this series here.
+This is first post in this series. You will find all the post of this series [here](https://mayankj08.github.io/2017/08/20/Series-Contents/).
 
 This post will talk just about references (lvalue references to be precise). But if you don't understand how lvalue references differ from rvalue references don't worry we will try to understand all these jargons in this series.
 
@@ -18,11 +18,10 @@ A `reference` defines an alternative name for an object. A reference type 'refer
 # Defining a reference
 
 ```c
-int a =10;
+int a = 10;
 int refA = &a;
 ```
-
-In above snippet we bound a reference `refA` to integer variable `a`. In other word `refA` is alias for `a`.
+In above snippet we bound a reference `refA` to integer variable `a`. In other words, `refA` is alias for `a`.
 
 # Few important points to remember
 
@@ -48,15 +47,15 @@ int a = 10;
 int &refA;     // Error
 ```
 
-`int &refAl;` is illegal, as we have not initialized the reference named `refA`. 
+`int &refA;` is illegal, as we have not initialized the reference named `refA`. 
 
 #### There's no way to rebind references. Once bound a reference remains bound to its initial object.
 
-References reamins bounded to the object which it was initialized with through out the life of reference. 
+References reamins bounded to the object which it was initialized with, through out the life of reference. 
 
 From Point 2 and 3 we can conclude that references can't be bound to NULL as intialization of references is necessary and also we can't rebind them. So there's no way of binding reference to NULL.
 
-Let's understand this with an example. 
+Let's consider below example to understand why reference re-binding is ambigous. 
 
 ```c
 int a = 10;
@@ -92,6 +91,8 @@ float a =10;
 int &refA = a;
 ```
 We define `a` of type float, but we are trying to bind this object to reference of type int. This is not allowed.
+
+NOTE: We will talk about exception which is mentioned here in later post.
 
 #### As references are not objects so we can't define reference to a reference. 
 
