@@ -17,4 +17,4 @@ Also, you can learn more about me on below platforms:
 * [Github](https://github.com/mayankj08)
 * [Facebook](https://www.facebook.com/mayankj08)
 
-
+Please find my resume [here](mjain_cv.pdf)
