@@ -5,7 +5,7 @@ tags: [ Compiler ]
 comments : true
 ---
 
-Many times we need to check cpu support for a particular feature, for example: We may need to check in our code if the CPU my code is running on supports AVX or not. To check this we can use compiler Intrinstics. One such intrinsic for gcc/clang (I am not sure if other compilers support this) is `__builtin_cpu_supports`. This instrinsic returns true if the hardware supports the feature given as input the the function call. Assume I want to check if my hardware supports AVX or not, I can check it as below:
+At times we need to check cpu support for a particular feature, for example: We may need to check in our code if the CPU my code is running on supports AVX or not. To check this we can use compiler Intrinstics. One such intrinsic for gcc/clang (I am not sure if other compilers support this) is `__builtin_cpu_supports`. This instrinsic returns true if the hardware supports the feature given as input the the function call. Assume I want to check if my hardware supports AVX or not, I can check it as below:
 
 ```
 #include<stdio.h>
