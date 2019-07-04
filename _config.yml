@@ -6,7 +6,7 @@ permalink:           pretty
 
 # Setup
 title:               Mayank Jain
-tagline:             Graduate Student at Binghamton University
+tagline:             Production Engineer at Facebook Inc.
 #description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:                 https://mayankj08.github.io/
 baseurl:             /
@@ -16,7 +16,7 @@ paginate:            5
 author:
   name:              Mayank Jain
   github:            mayankj08
-  email:             mjain8@binghamton.edu
+  email:             jainmmayank@gmail.com
   linkedin:          mayankj08
   url:               https://twitter.com/mdo
   email:             mjain8@binghamton.edu
@@ -26,7 +26,7 @@ author:
 version:             1.0.0
 
 #Gems
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate: 5
 paginate_path: "page:num"
 
@@ -48,7 +48,7 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
